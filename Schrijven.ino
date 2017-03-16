@@ -7,8 +7,8 @@ void draaien(int hoek, String  richting) {
     digitalWrite(richtingMotor2, LOW);
   }
 
-  analogWrite(PWMMotor1, 255);
-  analogWrite(PWMMotor2, 255);
+  analogWrite(PWMMotor1, 150);
+  analogWrite(PWMMotor2, 150);
 
   if (hoek == 1) {
     delay(570);
@@ -40,8 +40,8 @@ void recht(int lengte, String richting, boolean schrijven) {
     digitalWrite(richtingMotor2, LOW);
   }
 
-  analogWrite(PWMMotor1, 255);
-  analogWrite(PWMMotor2, 255);
+  analogWrite(PWMMotor1, 150);
+  analogWrite(PWMMotor2, 150);
 
   if (lengte == 1) {
     delay(800);

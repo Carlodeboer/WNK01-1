@@ -1,21 +1,21 @@
 #include <Servo.h>
 
-int schakelaar = 2;
+int schakelaar = 1;
 int richtingMotor1 = 4;
 int PWMMotor1 = 5;
 int richtingMotor2 = 7;
 int PWMMotor2 = 6;
 Servo myservo;
-//boolean aan;
 int segment_cijfer = 0;
 boolean segment_state = false;
+bool progAf = false;
 
 void tienCentimeter() {
   penOmhoog();
   digitalWrite(richtingMotor1, HIGH);
   digitalWrite(richtingMotor2, HIGH);
-  analogWrite(PWMMotor1, 255);
-  analogWrite(PWMMotor2, 255);
+  analogWrite(PWMMotor1, 150);
+  analogWrite(PWMMotor2, 150);
 
   for (int I = 0; I < 150; I++) {
     if (!segment_state) {
@@ -27,7 +27,11 @@ void tienCentimeter() {
     }
     delay(10);
   }
-  delay(1600);
+  digitalWrite(A4, HIGH);
+  digitalWrite(A5, HIGH);
+  //  delay(1600);
+  analogWrite(PWMMotor1, 0);
+  analogWrite(PWMMotor2, 0);
 }
 
 void setup() {
@@ -48,19 +52,27 @@ void setup() {
   pinMode(PWMMotor2, OUTPUT);
   myservo.attach(9);
   Serial.begin(9600);
+  
 }
 
 void loop() {
   penOmhoog();
   delay(500);
-
-  if (digitalRead(schakelaar) == HIGH) {
+  Serial.println(digitalRead(schakelaar));
+  int waarde = digitalRead(schakelaar);
+  if(waarde == 1 & progAf)
+  {
+    progAf = false;
+  }
+  if (waarde == 1 && !progAf) {
+    tienCentimeter();
+    letterA();
     tienCentimeter();
     draaien(4, "L");
     recht(2, "V", false);
     draaien(4, "L");
     tienCentimeter();
-    //    letterA();
+
     //    delay (2000);
     //    draaien(4, "L");
     //    recht(2, "V", false);
@@ -89,5 +101,6 @@ void loop() {
     //    draaien(4, "L");
     //    recht(1, "V", false);
     //    draaien(4, "L");
+    progAf = true;
   }
 }

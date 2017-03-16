@@ -1,5 +1,3 @@
-
-
 void letterOn() {
   digitalWrite(3, LOW);
   digitalWrite(8, HIGH);
