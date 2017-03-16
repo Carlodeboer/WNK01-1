@@ -9,6 +9,9 @@ Servo myservo;
 int segment_cijfer = 0;
 boolean segment_state = false;
 bool progAf = false;
+bool startBereikt = false;
+const int lijnSensor = A0;
+int zwartTimer = 0; 
 
 void tienCentimeter() {
   penOmhoog();
@@ -35,6 +38,8 @@ void tienCentimeter() {
 }
 
 void setup() {
+  pinMode(lijnSensor, INPUT);
+  
   pinMode(schakelaar, INPUT);
   pinMode(A4, OUTPUT);
   pinMode(A5, OUTPUT);
@@ -52,10 +57,33 @@ void setup() {
   pinMode(PWMMotor2, OUTPUT);
   myservo.attach(9);
   Serial.begin(9600);
-  
 }
 
 void loop() {
+
+  int proximityADC = analogRead(lijnSensor);
+  float proximityV = (float)proximityADC * 5.0 / 1023.0;
+ 
+  if (proximityV > 2.5) {
+    zwartTimer = 0;
+  }else {
+    zwartTimer ++;
+    
+       if(zwartTimer >= 1000 && startBereikt == false){
+         Serial.println("Startlijn bereikt");
+         tienCentimeter();
+         startBereikt = true;
+         
+       }
+
+        if(zwartTimer >= 2000){
+         Serial.println("Grenslijn bereikt");
+         penOmlaag();
+         analogWrite(PWMMotor1, 0);
+         analogWrite(PWMMotor2, 0);
+       }
+  }
+  
   penOmhoog();
   delay(500);
   Serial.println(digitalRead(schakelaar));
