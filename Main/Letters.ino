@@ -111,3 +111,96 @@ void letterJ() {
   recht(1, "A", false);
   draaien(4, "R");
 }
+
+void letterK() {
+  recht(2, "V", true);
+  recht(1, "A", false);
+  draaien( 9, "R");
+  recht(3, "V", true);
+  recht(3, "A", false);
+  draaien(9, "R");
+  recht(1, "V", true);
+  draaien(9, "R");
+}
+
+void letterL() {
+  recht(2, "V", true);
+  recht(2, "A", false);
+  draaien(4, "R");
+  recht(1, "V", true);
+  draaien(4, "R");
+}
+
+void letterM() {
+
+}
+
+void letterN() {
+
+}
+
+void letterO() {
+  draaien(4, "R");
+  recht(1, "V", false);
+  halfRondje(1, "V");
+  halfRondje(1, "V");
+  recht(1, "V", false);
+  draaien(4, "R");
+}
+
+void letterP() {
+  recht(2, "V", true);
+  draaien(4, "R");
+  halfRondje(1, "V");
+  draaien(4, "L");
+  recht(1, "V", false);
+  draaien(4, "L");
+  recht(1, "V", false);
+  draaien(4, "R");
+}
+
+void letterQ() {
+  // Fuck die q
+}
+
+void letterR() {
+  recht(2, "V", true);
+  draaien(4, "R");
+  halfRondje(1, "V");
+  draaien(9, "R");
+  recht(3, "A", false);
+  draaien(9, "R");
+}
+
+void letterS() {
+
+}
+
+void letterT() {
+
+}
+
+void letterU() {
+
+}
+
+void letterV() {
+
+}
+
+void letterW {
+
+}
+
+void letterX {
+  
+}
+
+void letterY {
+  
+}
+
+void letterZ {
+  
+}
+
