@@ -131,13 +131,13 @@ void letterL() {
   draaien(4, "R");
 }
 
-void letterM() {
-
-}
-
-void letterN() {
-
-}
+//void letterM() {
+//
+//}
+//
+//void letterN() {
+//
+//}
 
 void letterO() {
   draaien(4, "R");
@@ -159,9 +159,9 @@ void letterP() {
   draaien(4, "R");
 }
 
-void letterQ() {
-  // Fuck die q
-}
+//void letterQ() {
+//  // Fuck die q
+//}
 
 void letterR() {
   recht(2, "V", true);
@@ -172,35 +172,35 @@ void letterR() {
   draaien(9, "R");
 }
 
-void letterS() {
-
-}
-
-void letterT() {
-
-}
-
-void letterU() {
-
-}
-
-void letterV() {
-
-}
-
-void letterW {
-
-}
-
-void letterX {
-  
-}
-
-void letterY {
-  
-}
-
-void letterZ {
-  
-}
+//void letterS() {
+//
+//}
+//
+//void letterT() {
+//
+//}
+//
+//void letterU() {
+//
+//}
+//
+//void letterV() {
+//
+//}
+//
+//void letterW {
+//
+//}
+//
+//void letterX {
+//  
+//}
+//
+//void letterY {
+//  
+//}
+//
+//void letterZ {
+//  
+//}
 
