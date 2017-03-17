@@ -11,8 +11,8 @@ boolean segment_state = false;
 bool progAf = false;
 int lijnSensor1 = A0;
 int lijnSensor2 = A1;
-int zwartTimer = 0;
-int zwartWaarde = 2.5;
+int zwartTimer;
+int zwartWaarde = 3;
 bool zwarteLijn;
 bool startBereikt;
 
@@ -67,11 +67,18 @@ void setup() {
 }
 
 bool door = true;
+
 void loop() {
+
+  while(door){
   digitalWrite(richtingMotor1, HIGH);
   digitalWrite(richtingMotor2, HIGH);
   analogWrite(PWMMotor1, 150);
   analogWrite(PWMMotor2, 150);
+  door = false;
+  }
+checkLijn();  
+  
   //  penOmlaag();
 
 }
