@@ -13,6 +13,7 @@ void draaien(int hoek, String  richting) {
   analogWrite(PWMMotor2, 150);
 
   if (hoek == 1) {
+//    for(int i = 0; i <= 360; i = i + 
     delay(360);
   } else if (hoek == 2) {
     delay(700);
