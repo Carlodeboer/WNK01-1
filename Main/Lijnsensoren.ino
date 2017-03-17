@@ -12,16 +12,15 @@ void checkLijn() {
   } else {
     zwarteLijn = true;
   }
-
+ 
   if (zwarteLijn == false) {
     zwartTimer = 0;
-    Serial.println(proximityV2);
   }
   else {
     zwartTimer ++;
-    Serial.println(proximityV2);
+   
 
-    if (zwartTimer >= 1000 && startBereikt == false) {
+    if (zwartTimer >= 1 && startBereikt == false) {
       Serial.println("Startlijn bereikt.");
       startBereikt = true;
     }

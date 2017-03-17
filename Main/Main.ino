@@ -68,10 +68,10 @@ void setup() {
 
 bool door = true;
 void loop() {
+  digitalWrite(richtingMotor1, HIGH);
+  digitalWrite(richtingMotor2, HIGH);
+  analogWrite(PWMMotor1, 150);
+  analogWrite(PWMMotor2, 150);
   //  penOmlaag();
-  delay(4000);
-  while (door == true) {
-    letterA();
-    door = false;
-  }
+
 }
