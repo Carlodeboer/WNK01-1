@@ -1,7 +1,7 @@
 void letterOn() {
   digitalWrite(3, LOW);
   digitalWrite(8, HIGH);
-  digitalWrite(9, HIGH);
+  digitalWrite(0, HIGH);
   digitalWrite(10, LOW);
   digitalWrite(11, LOW); // LETTER
   digitalWrite(12, HIGH);
@@ -14,7 +14,7 @@ void numberOn(int number) {
   if (number == 0) {
     digitalWrite(3, HIGH);
     digitalWrite(8, HIGH);
-    digitalWrite(9, HIGH);
+    digitalWrite(0, HIGH);
     digitalWrite(10, HIGH);
     digitalWrite(11, HIGH);
     digitalWrite(12, HIGH);
@@ -24,7 +24,7 @@ void numberOn(int number) {
   } else if (number == 1) {
     digitalWrite(3, HIGH);
     digitalWrite(8, LOW);
-    digitalWrite(9, LOW);
+    digitalWrite(0, LOW);
     digitalWrite(10, HIGH);
     digitalWrite(11, LOW);
     digitalWrite(12, LOW);
@@ -34,7 +34,7 @@ void numberOn(int number) {
   } else if (number == 2) {
     digitalWrite(3, LOW);
     digitalWrite(8, HIGH);
-    digitalWrite(9, HIGH);
+    digitalWrite(0, HIGH);
     digitalWrite(10, HIGH);
     digitalWrite(11, HIGH);
     digitalWrite(12, LOW);
@@ -44,7 +44,7 @@ void numberOn(int number) {
   } else if (number == 3) {
     digitalWrite(3, HIGH);
     digitalWrite(8, LOW);
-    digitalWrite(9, HIGH);
+    digitalWrite(0, HIGH);
     digitalWrite(10, HIGH);
     digitalWrite(11, HIGH);
     digitalWrite(12, LOW);
@@ -54,7 +54,7 @@ void numberOn(int number) {
   } else if (number == 4) {
     digitalWrite(3, HIGH);
     digitalWrite(8, LOW);
-    digitalWrite(9, LOW);
+    digitalWrite(0, LOW);
     digitalWrite(10, HIGH);
     digitalWrite(11, LOW);
     digitalWrite(12, HIGH);
@@ -64,7 +64,7 @@ void numberOn(int number) {
   } else if (number == 5) {
     digitalWrite(3, HIGH);
     digitalWrite(8, LOW);
-    digitalWrite(9, HIGH);
+    digitalWrite(0, HIGH);
     digitalWrite(10, LOW);
     digitalWrite(11, HIGH);
     digitalWrite(12, HIGH);
@@ -74,7 +74,7 @@ void numberOn(int number) {
   } else if (number == 6) {
     digitalWrite(3, HIGH);
     digitalWrite(8, HIGH);
-    digitalWrite(9, HIGH);
+    digitalWrite(0, HIGH);
     digitalWrite(10, LOW);
     digitalWrite(11, HIGH);
     digitalWrite(12, HIGH);
@@ -84,7 +84,7 @@ void numberOn(int number) {
   } else if (number == 7) {
     digitalWrite(3, HIGH);
     digitalWrite(8, LOW);
-    digitalWrite(9, LOW);
+    digitalWrite(0, LOW);
     digitalWrite(10, HIGH);
     digitalWrite(11, HIGH);
     digitalWrite(12, LOW);
@@ -94,7 +94,7 @@ void numberOn(int number) {
   } else if (number == 8) {
     digitalWrite(3, HIGH);
     digitalWrite(8, HIGH);
-    digitalWrite(9, HIGH);
+    digitalWrite(0, HIGH);
     digitalWrite(10, HIGH);
     digitalWrite(11, HIGH);
     digitalWrite(12, HIGH);
@@ -104,7 +104,7 @@ void numberOn(int number) {
   } else if (number == 9) {
     digitalWrite(3, HIGH);
     digitalWrite(8, LOW);
-    digitalWrite(9, HIGH);
+    digitalWrite(0, HIGH);
     digitalWrite(10, HIGH);
     digitalWrite(11, HIGH);
     digitalWrite(12, HIGH);

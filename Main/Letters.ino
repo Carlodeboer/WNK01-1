@@ -1,7 +1,8 @@
 
 void letterA() {
   draaien(1, "R");
-  recht(4, "V", true);
+  recht(3, "V", true);
+  recht(3, "V", true);
   draaien(2, "L");
   recht(3, "A", true);
   draaien(3, "L");

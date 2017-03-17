@@ -1,4 +1,6 @@
 void draaien(int hoek, String  richting) {
+  delay(500);
+  penOmlaag();
   if (richting.equals("R")) {
     digitalWrite(richtingMotor1, LOW);
     digitalWrite(richtingMotor2, HIGH);
@@ -11,27 +13,27 @@ void draaien(int hoek, String  richting) {
   analogWrite(PWMMotor2, 150);
 
   if (hoek == 1) {
-    delay(570);
+    delay(360);
   } else if (hoek == 2) {
-    delay(1120);
+    delay(700);
   } else if (hoek == 3) {
-    delay(1330);
+    delay(805);
   } else if (hoek == 4) {
-    delay(1900);
+    delay(1150);
   }
 
   analogWrite(PWMMotor1, 0);
   analogWrite(PWMMotor2, 0);
-  delay(200);
+  delay(500);
 }
 
 void recht(int lengte, String richting, boolean schrijven) {
+  delay(500);
   if (schrijven) {
     penOmlaag();
   } else if (!schrijven) {
-    penOmhoog();
+//    penOmhoog();
   }
-
   if (richting.equals("V")) {
     digitalWrite(richtingMotor1, HIGH);
     digitalWrite(richtingMotor2, HIGH);
@@ -44,18 +46,18 @@ void recht(int lengte, String richting, boolean schrijven) {
   analogWrite(PWMMotor2, 150);
 
   if (lengte == 1) {
-    delay(800);
+    delay(400);
   } else if (lengte == 2) {
-    delay(1600);
+    delay(800);
   } else if (lengte == 3) {
-    delay(895);
+    delay(448);
   } else if (lengte == 4) {
-    delay(1790);
+    delay(895);
   }
 
   analogWrite(PWMMotor1, 0);
   analogWrite(PWMMotor2, 0);
-  delay(200);
+  delay(500);
 }
 
 void halfRondje(int grootte, String richting) {
@@ -64,8 +66,10 @@ void halfRondje(int grootte, String richting) {
 
 void penOmhoog() {
   myservo.write(140);
+  delay(500);
 }
 
 void penOmlaag() {
   myservo.write(170);
+  delay(500);
 }
