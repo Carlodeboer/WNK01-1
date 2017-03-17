@@ -9,10 +9,12 @@ Servo myservo;
 int segment_cijfer = 0;
 boolean segment_state = false;
 bool progAf = false;
-bool startBereikt = false;
-const int lijnSensor = A0;
+int lijnSensor1 = A0;
+int lijnSensor2 = A1;
 int zwartTimer = 0;
-int pos = 0;
+int zwartWaarde = 2.5;
+bool zwarteLijn;
+bool startBereikt;
 
 void tienCentimeter() {
   penOmhoog();
@@ -39,9 +41,11 @@ void tienCentimeter() {
 }
 
 void setup() {
-  pinMode(lijnSensor, INPUT);
+  pinMode(lijnSensor1, INPUT);
+  pinMode(lijnSensor2, INPUT);
 
   pinMode(schakelaar, INPUT);
+  
   pinMode(A4, OUTPUT);
   pinMode(A5, OUTPUT);
   pinMode(3, OUTPUT);
@@ -56,13 +60,15 @@ void setup() {
   pinMode(PWMMotor1, OUTPUT);
   pinMode(richtingMotor2, OUTPUT);
   pinMode(PWMMotor2, OUTPUT);
+  
   myservo.attach(9);
+  
   Serial.begin(9600);
 }
 
 bool door = true;
 void loop() {
-//  penOmlaag();
+  //  penOmlaag();
   delay(4000);
   while (door == true) {
     letterA();
