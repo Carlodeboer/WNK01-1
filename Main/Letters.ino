@@ -244,7 +244,7 @@ void letterV() {
   draaien(4, "R");
 }
 //
-void letterW {
+void letterW() {
   // Gecontroleerd
   //
   recht(2, "V", false);
@@ -264,7 +264,7 @@ void letterW {
   draaien(4, "R");
 }
 
-void letterX {
+void letterX() {
   // Gecontroleerd
   //
   draaien(1, "R");
@@ -276,7 +276,7 @@ void letterX {
   draaien(1, "R");
 }
 
-void letterY {
+void letterY() {
   // Gecontroleerd
   //
   recht(2, "V", false);
@@ -293,7 +293,7 @@ void letterY {
   draaien(4, "R");
 }
 
-void letterZ {
+void letterZ() {
   // Gecontroleerd
   //
   recht(2,"V", false);

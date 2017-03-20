@@ -23,7 +23,7 @@ void tienCentimeter() {
   analogWrite(PWMMotor1, 150);
   analogWrite(PWMMotor2, 150);
 
-  for (int I = 0; I < 150; I++) {
+  for (int I = 0; I < 90; I++) {
     if (!segment_state) {
       numberOn(segment_cijfer);
       segment_state = true;
