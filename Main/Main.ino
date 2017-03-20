@@ -21,8 +21,8 @@ void tienCentimeter() {
   penOmhoog();
   digitalWrite(richtingMotor1, HIGH);
   digitalWrite(richtingMotor2, HIGH);
-  analogWrite(PWMMotor1, 150);
-  analogWrite(PWMMotor2, 150);
+  analogWrite(PWMMotor1, 140);
+  analogWrite(PWMMotor2, 140);
 
   for (int I = 0; I < 90; I++) {
     if (!segment_state) {
@@ -46,7 +46,7 @@ void setup() {
   pinMode(lijnSensor2, INPUT);
 
   pinMode(schakelaar, INPUT);
-  
+
   pinMode(A4, OUTPUT);
   pinMode(A5, OUTPUT);
   pinMode(3, OUTPUT);
@@ -61,9 +61,9 @@ void setup() {
   pinMode(PWMMotor1, OUTPUT);
   pinMode(richtingMotor2, OUTPUT);
   pinMode(PWMMotor2, OUTPUT);
-  
+
   myservo.attach(9);
-  
+
   Serial.begin(9600);
   while (! Serial);
   Serial.println("Woord:");
@@ -73,23 +73,19 @@ void setup() {
 bool door = true;
 
 void loop() {
-  if (Serial.available())
-  {
-    woord = Serial.readString();
-    woord.toUpperCase();
-    Serial.print(woord);
-  }
-  
-  while(door){
-  digitalWrite(richtingMotor1, HIGH);
-  digitalWrite(richtingMotor2, HIGH);
-  analogWrite(PWMMotor1, 150);
-  analogWrite(PWMMotor2, 150);
-  door = false;
-  }
 
-checkLijn();  
-  
-  //  penOmlaag();
+  //  if (Serial.available())
+  //  {
+  //    woord = Serial.readString();
+  //    woord.toUpperCase();
+  //    Serial.print(woord);
+  //  }
 
+
+  //checkLijn();
+  while (door) {
+    letterI();
+    letterE();
+    door = false;
+  }
 }

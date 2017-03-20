@@ -1,88 +1,114 @@
-void kiesLetters(){
-  
-   for(int i = 0; i < woord.length(); i++)
+void kiesLetters() {
+
+  for (int i = 0; i < woord.length(); i++)
   {
-     char letter = woord.charAt(i);
-     if (letter == 'A'){ letterA();
-     
-     }
-     if (letter == 'B'){ letterB();
+    char letter = woord.charAt(i);
+    if (letter == 'A') {
+      letterA();
 
-     }
-     if (letter == 'C'){ letterC();
+    }
+    if (letter == 'B') {
+      letterB();
 
-     }
-     if (letter == 'D'){ letterD();
+    }
+    if (letter == 'C') {
+      letterC();
 
-     }
-     if (letter == 'E'){ letterE();
+    }
+    if (letter == 'D') {
+      letterD();
 
-     }
-     if (letter == 'F'){ letterF();
+    }
+    if (letter == 'E') {
+      letterE();
 
-     }
-     if (letter == 'G'){ letterG();
+    }
+    if (letter == 'F') {
+      letterF();
 
-     }
-     if (letter == 'H'){ letterH();
+    }
+    if (letter == 'G') {
+      letterG();
 
-     }
-     if (letter == 'I'){ letterI();
+    }
+    if (letter == 'H') {
+      letterH();
 
-     }
-     if (letter == 'J'){ letterJ();
+    }
+    if (letter == 'I') {
+      letterI();
 
-     }
-     if (letter == 'K'){ letterK();
+    }
+    if (letter == 'J') {
+      letterJ();
 
-     }
-     if (letter == 'L'){ letterL();
+    }
+    if (letter == 'K') {
+      letterK();
 
-     }
-     if (letter == 'M'){ letterM();
+    }
+    if (letter == 'L') {
+      letterL();
 
-     }
-     if (letter == 'N'){ letterN();
+    }
+    if (letter == 'M') {
+      letterM();
 
-     }
-     if (letter == 'O'){ letterO();
+    }
+    if (letter == 'N') {
+      letterN();
 
-     }
-     if (letter == 'P'){ letterP();
+    }
+    if (letter == 'O') {
+      letterO();
 
-     }
-     if (letter == 'Q'){ letterQ();
+    }
+    if (letter == 'P') {
+      letterP();
 
-     }
-     if (letter == 'R'){ letterR();
+    }
+    if (letter == 'Q') {
+      letterQ();
 
-     }
-     if (letter == 'S'){ letterS();
+    }
+    if (letter == 'R') {
+      letterR();
 
-     }
-     if (letter == 'T'){ letterT();
+    }
+    if (letter == 'S') {
+      letterS();
 
-     }
-     if (letter == 'U'){ letterU();
+    }
+    if (letter == 'T') {
+      letterT();
 
-     }
-     if (letter == 'V'){ letterV();
+    }
+    if (letter == 'U') {
+      letterU();
 
-     }
-     if (letter == 'W'){ letterW();
+    }
+    if (letter == 'V') {
+      letterV();
 
-     }
-     if (letter == 'X'){ letterX();
+    }
+    if (letter == 'W') {
+      letterW();
 
-     }
-     if (letter == 'Y'){ letterY();
+    }
+    if (letter == 'X') {
+      letterX();
 
-     }
-     if (letter == 'Z'){ letterZ();
+    }
+    if (letter == 'Y') {
+      letterY();
 
-     }
+    }
+    if (letter == 'Z') {
+      letterZ();
+
+    }
   }
-  
+
 }
 
 void letterA() {
@@ -173,16 +199,34 @@ void letterG() {
 void letterH() {
   // Gecontroleerd
   //
-  recht(2, "V", true);
+  //  recht(2, "V", true);
+  //  draaien(4, "R");
+  //  recht(1, "V", false);
+  //  draaien(4, "R");
+  //  recht(1, "V", true);
+  //  draaien(4, "R");
+  //  recht(1, "V", true);
+  //  recht(1, "A", false);
+  //  draaien(4, "L");
+  //  recht(1, "V", true);
+
+
+  recht(1, "V", true);
+  recht(1, "V", true);
   draaien(4, "R");
   recht(1, "V", false);
   draaien(4, "R");
   recht(1, "V", true);
+  recht(1, "V", true);
+  recht(1, "A", true);
   draaien(4, "R");
   recht(1, "V", true);
   recht(1, "A", false);
-  draaien(4, "L");
+  draaien(4, "R");
+  draaien(4, "R");
+  draaien(4, "R");
   recht(1, "V", true);
+  //  recht(1, "V", true);
 }
 
 void letterI() {
@@ -192,6 +236,7 @@ void letterI() {
   recht(2, "A", false);
   draaien(4, "R");
   draaien(4, "R");
+  zoekReferentielijn();
 }
 
 void letterJ() {
@@ -281,7 +326,7 @@ void letterP() {
 }
 
 void letterQ() {
-//  // Fuck die q
+  //  // Fuck die q
 }
 
 void letterR() {
@@ -294,7 +339,7 @@ void letterR() {
 }
 
 void letterS() {
-//
+  //
 }
 
 void letterT() {
@@ -367,7 +412,7 @@ void letterY() {
   //
   recht(2, "V", false);
   draaien(1, "L");
-  recht(3,"A", true);
+  recht(3, "A", true);
   draaien(1, "R");
   recht(1, "A", true);
   recht(1, "V", false);
@@ -382,7 +427,7 @@ void letterY() {
 void letterZ() {
   // Gecontroleerd
   //
-  recht(2,"V", false);
+  recht(2, "V", false);
   draaien(4, "R");
   recht(1, "V", true);
   draaien(3, "L");
