@@ -1,3 +1,89 @@
+void kiesLetters(){
+  
+   for(int i = 0; i < woord.length(); i++)
+  {
+     char letter = woord.charAt(i);
+     if (letter == 'A'){ letterA();
+     
+     }
+     if (letter == 'B'){ letterB();
+
+     }
+     if (letter == 'C'){ letterC();
+
+     }
+     if (letter == 'D'){ letterD();
+
+     }
+     if (letter == 'E'){ letterE();
+
+     }
+     if (letter == 'F'){ letterF();
+
+     }
+     if (letter == 'G'){ letterG();
+
+     }
+     if (letter == 'H'){ letterH();
+
+     }
+     if (letter == 'I'){ letterI();
+
+     }
+     if (letter == 'J'){ letterJ();
+
+     }
+     if (letter == 'K'){ letterK();
+
+     }
+     if (letter == 'L'){ letterL();
+
+     }
+     if (letter == 'M'){ letterM();
+
+     }
+     if (letter == 'N'){ letterN();
+
+     }
+     if (letter == 'O'){ letterO();
+
+     }
+     if (letter == 'P'){ letterP();
+
+     }
+     if (letter == 'Q'){ letterQ();
+
+     }
+     if (letter == 'R'){ letterR();
+
+     }
+     if (letter == 'S'){ letterS();
+
+     }
+     if (letter == 'T'){ letterT();
+
+     }
+     if (letter == 'U'){ letterU();
+
+     }
+     if (letter == 'V'){ letterV();
+
+     }
+     if (letter == 'W'){ letterW();
+
+     }
+     if (letter == 'X'){ letterX();
+
+     }
+     if (letter == 'Y'){ letterY();
+
+     }
+     if (letter == 'Z'){ letterZ();
+
+     }
+  }
+  
+}
 
 void letterA() {
   draaien(1, "R");
@@ -194,9 +280,9 @@ void letterP() {
   draaien(4, "R");
 }
 
-//void letterQ() {
+void letterQ() {
 //  // Fuck die q
-//}
+}
 
 void letterR() {
   recht(2, "V", true);
@@ -207,10 +293,10 @@ void letterR() {
   draaien(9, "R");
 }
 
-//void letterS() {
+void letterS() {
 //
-//}
-//
+}
+
 void letterT() {
   // Gecontroleerd
   //
@@ -226,10 +312,10 @@ void letterT() {
   recht(2, "V", false);
 }
 //
-//void letterU() {
+void letterU() {
 
-//}
-//
+}
+
 void letterV() {
   // Gecontroleerd
   //

@@ -15,6 +15,7 @@ int zwartTimer;
 int zwartWaarde = 3;
 bool zwarteLijn;
 bool startBereikt;
+String woord;
 
 void tienCentimeter() {
   penOmhoog();
@@ -64,12 +65,21 @@ void setup() {
   myservo.attach(9);
   
   Serial.begin(9600);
+  while (! Serial);
+  Serial.println("Woord:");
+
 }
 
 bool door = true;
 
 void loop() {
-
+  if (Serial.available())
+  {
+    woord = Serial.readString();
+    woord.toUpperCase();
+    Serial.print(woord);
+  }
+  
   while(door){
   digitalWrite(richtingMotor1, HIGH);
   digitalWrite(richtingMotor2, HIGH);
@@ -77,6 +87,7 @@ void loop() {
   analogWrite(PWMMotor2, 150);
   door = false;
   }
+
 checkLijn();  
   
   //  penOmlaag();
