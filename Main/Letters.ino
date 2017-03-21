@@ -156,7 +156,8 @@ void letterD() {
 void letterE() {
   // Gecontroleerd
   //
-  recht(2, "V", true);
+  recht(1, "V", true);
+  recht(1, "V", true);
   draaien(4, "R");
   recht(1, "V", true);
   draaien(4, "R");
@@ -168,13 +169,16 @@ void letterE() {
   draaien(4, "L");
   recht(1, "V", true);
   draaien(4, "R");
+
+  referentielijnGezien = false;
   zoekReferentielijn();
 }
 
 void letterF() {
   // Gecontroleerd
   //
-  recht(2, "V", true);
+  recht(1, "V", true);
+  recht(1, "V", true);
   draaien(4, "R");
   recht(1, "V", true);
   draaien(4, "R");
@@ -275,8 +279,10 @@ void letterK() {
 void letterL() {
   // Gecontroleerd
   //
-  recht(2, "V", true);
-  recht(2, "A", false);
+  recht(1, "V", true);
+  recht(1, "V", true);
+  recht(1, "V", false);
+  recht(1, "V", false);
   draaien(4, "R");
   recht(1, "V", true);
   draaien(4, "R");
@@ -353,13 +359,15 @@ void letterT() {
   draaien(4, "R");
   recht(1, "V", false);
   draaien(4, "L");
-  recht(2, "V", true);
+  recht(1, "V", true);
+  recht(1, "V", true);
   draaien(4, "L");
   recht(1, "V", true);
   recht(1, "A", false);
   recht(1, "A", true);
   draaien(4, "L");
-  recht(2, "V", false);
+  recht(1, "V", false);
+  recht(1, "V", false);
   zoekReferentielijn();
 }
 //

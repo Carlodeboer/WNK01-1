@@ -2,7 +2,6 @@ bool temp = false;
 int test = 0;
 //bool zwarteLijnGezien = false;
 bool kaderlijnGezien = false;
-bool referentielijnGezien = false;
 
 void checkLijn() {
   int proximityADC1 = analogRead(lijnSensor1);
@@ -40,7 +39,13 @@ void checkLijn() {
         if(segment_cijfer == 1){
       
       draaien(4, "L");
-      recht(1, "V", false);
+      digitalWrite(richtingMotor1, HIGH);
+      digitalWrite(richtingMotor2, HIGH);
+      analogWrite(PWMMotor1, 140);
+      analogWrite(PWMMotor2, 140);
+      delay(400);
+      analogWrite(PWMMotor1, 0);
+      analogWrite(PWMMotor2, 0);
       draaien(4, "L");
     } 
     tienCentimeter();
