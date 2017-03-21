@@ -37,10 +37,13 @@ void checkLijn() {
       Serial.println("referentielijn is gevonden.");
       analogWrite(PWMMotor1, 0);
       analogWrite(PWMMotor2, 0);
+        if(segment_cijfer == 1){
+      
       draaien(4, "L");
       recht(1, "V", false);
       draaien(4, "L");
-      tienCentimeter();
+    } 
+    tienCentimeter();
     }
     test = 0;
     //    zwarteLijnGezien = true;

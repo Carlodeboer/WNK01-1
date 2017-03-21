@@ -88,6 +88,6 @@ void penOmhoog() {
 }
 
 void penOmlaag() {
-  myservo.write(168);
+  myservo.write(175);
   delay(500);
 }

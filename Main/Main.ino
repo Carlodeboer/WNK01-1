@@ -24,7 +24,7 @@ void tienCentimeter() {
   analogWrite(PWMMotor1, 140);
   analogWrite(PWMMotor2, 140);
 
-  for (int I = 0; I < 90; I++) {
+  for (int I = 0; I < 40; I++) {
     if (!segment_state) {
       numberOn(segment_cijfer);
       segment_state = true;
@@ -82,10 +82,21 @@ void loop() {
   //  }
 
 
-  //checkLijn();
+  
   while (door) {
-    letterI();
+   
+    delay(3000);
+    zoekReferentielijn();
+    letterH();
+    segment_cijfer++;
     letterE();
+     segment_cijfer++;
+    letterL();
+     segment_cijfer++;
+    letterF();
+     segment_cijfer++;
+    letterT();
+     segment_cijfer++;
     door = false;
   }
 }
